@@ -1,0 +1,14 @@
+# create app
+npx create-react-app react_todo_list
+
+
+# run app
+npm start
+
+
+# add router
+npm i react-router-dom
+
+
+# add bootstrap
+npm install react-bootstrap bootstrap
