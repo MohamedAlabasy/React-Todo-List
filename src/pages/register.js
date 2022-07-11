@@ -1,19 +1,19 @@
 import { useState } from 'react';
 
-export default function register() {
+export default function Register() {
     const [isCheck, setIsCheck] = useState(true);
 
     const changeCheckValue = () => {
         setIsCheck(!isCheck)
     }
 
-    const toVerificationEmail = () => {
+    // const toVerificationEmail = () => {
 
-    }
+    // }
     return (
         <>
             <div className='container my-5'>
-                <form onSubmit={() => { }}>
+                <form >
                     {/* name */}
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Name</label>
@@ -41,7 +41,7 @@ export default function register() {
                         <label className="form-check-label" htmlFor="exampleCheck"  >Check me out</label>
                     </div>
 
-                    <button type="submit" className="btn btn-primary" onClick={() => { }} disabled={isCheck}>Submit</button>
+                    <button type="submit" className="btn btn-primary" disabled={isCheck}>Submit</button>
                 </form>
             </div>
         </>

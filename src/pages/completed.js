@@ -1,6 +1,6 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
-export default function completed() {
+export default function Completed() {
     return (
         <div>completed</div>
     )

@@ -1,6 +1,6 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
-export default function verificationEmail() {
+export default function VerificationEmail() {
     return (
         <div>Verification</div>
     )

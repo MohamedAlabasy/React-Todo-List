@@ -1,6 +1,6 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
-export default function notVerified() {
+export default function NotVerified() {
     return (
         <div>notVerified</div>
     )
