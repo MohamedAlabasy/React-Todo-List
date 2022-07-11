@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Register() {
+export default function register() {
     const [isCheck, setIsCheck] = useState(true);
 
     const changeCheckValue = () => {

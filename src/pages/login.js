@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 
-export default function Login() {
+export default function login() {
     return (
         <>
             <div className='container my-5'>
