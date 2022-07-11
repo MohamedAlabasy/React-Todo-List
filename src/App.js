@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/login';
 import Home from './pages/home';
+import SingleTodo from './pages/singleTodo';
 import Register from './pages/register';
 import InProgress from './pages/inProgress';
 import UnderReview from './pages/underReview';
@@ -19,6 +20,8 @@ function App() {
           <Route path='/login' exact element={<Login />} />
           <Route path='/register' exact element={<Register />} />
           <Route path='/home' exact element={<Home />} />
+          <Route path='/show' exact element={<SingleTodo />} />
+          <Route path='/edit' exact element={<editTodo />} />
           <Route path='/inProgress' exact element={<InProgress />} />
           <Route path='/underReview' exact element={<UnderReview />} />
           <Route path='/rework' exact element={<Rework />} />
