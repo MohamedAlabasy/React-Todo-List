@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 export default function Login() {
     return (
@@ -19,7 +19,7 @@ export default function Login() {
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                         <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                     </div>
-                    <Button type="submit" className="btn btn-primary">Submit</Button>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
         </>
