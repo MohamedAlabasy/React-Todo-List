@@ -5,6 +5,7 @@ import Register from './pages/register';
 import InProgress from './pages/inProgress';
 import UnderReview from './pages/underReview';
 import Rework from './pages/rework';
+import Completed from './pages/completed';
 import VerificationEmail from './pages/verificationEmail';
 import NotVerified from './pages/notVerified';
 import NotFound from './pages/notFound';
@@ -21,6 +22,7 @@ function App() {
           <Route path='/inProgress' exact element={<InProgress />} />
           <Route path='/underReview' exact element={<UnderReview />} />
           <Route path='/rework' exact element={<Rework />} />
+          <Route path='/completed' exact element={<Completed />} />
           <Route path='/verification' exact element={<VerificationEmail />} />
           <Route path='/notVerified' exact element={<NotVerified />} />
           <Route path='*' element={<NotFound />} />
