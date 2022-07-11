@@ -11,8 +11,12 @@ npm i react-router-dom
 
 
 # add bootstrap
-npm install react-bootstrap bootstrap
+npm i react-bootstrap bootstrap
 
 
 # add react icons
-npm install react-icons --save
+npm i react-icons --save
+
+
+# add alert
+npm i --save sweetalert2 sweetalert2-react-content
