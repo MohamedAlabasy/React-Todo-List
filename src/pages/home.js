@@ -49,8 +49,8 @@ export default function Home() {
                                             </td>
 
                                             <td className="align-middle">
-                                                <Link to="#" title="show"><BiShowAlt className="text-success me-3" style={{ width: "30px", height: "30px" }} /></Link>
-                                                <Link to="#" title="edit"><AiFillEdit className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
+                                                <Link to="/show" title="show"><BiShowAlt className="text-success me-3" style={{ width: "30px", height: "30px" }} /></Link>
+                                                <Link to="/edit" title="edit"><AiFillEdit className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
                                                 <Link to="#" title="delete"><AiFillDelete className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
                                             </td>
                                         </tr>
