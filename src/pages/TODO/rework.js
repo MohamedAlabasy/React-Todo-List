@@ -2,5 +2,5 @@
 import TodoTable from '../../components/todoTable'
 
 export default function Rework() {
-    return TodoTable('Rework')
+    return TodoTable('Rework', 'rework')
 }

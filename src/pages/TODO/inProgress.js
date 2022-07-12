@@ -2,6 +2,6 @@
 import TodoTable from '../../components/todoTable'
 
 export default function InProgress() {
-    return TodoTable('In Progress')
+    return TodoTable('In Progress', 'inProgress')
 
 }

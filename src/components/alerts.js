@@ -107,39 +107,35 @@ export const saveAlert = () => {
 }
 
 
-export const showTODO = () => {
+export const showTODO = (todoData) => {
+    console.log(todoData);
     Swal.fire({
-        title: 'title',
+        title: todoData.title,
         width: '80%',
         html:
             `<div class="container row justify-content-center text-center">
             <div class="col-lg-12 col-6 card">
-                <div class="card-header border-0 text-center font-weight-bold">High priority</div>
+                <div class="card-header border-0 text-center font-weight-bold ${todoData.priority === 'high' ? 'bg-danger text-white' : todoData.priority === 'medium' ? 'bg-warning text-dark' : 'bg-primary text-white'}">${todoData.priority}</div>
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
                         <p class=" text-center font-weight-bold">
-                            Call Sam For paymentsCall Sam For payments Call Sam For payments Call Sam For payments Call Sam
-                            Call Sam For paymentsCall Sam For payments Call Sam For payments Call Sam For payments Call Sam
-                            Call Sam For paymentsCall Sam For payments Call Sam For payments Call Sam For payments Call Sam
-                            Call Sam For paymentsCall Sam For payments Call Sam For payments Call Sam For payments Call Sam
-                            For payments Call Sam For payments
-                            <span class="text-muted">17-3-1997</span>
-                        </p>
-                    </div>
+                            ${todoData.description}
+                        </p >
+                    </div >
                     <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
                         <p class="d-flex flex-column text-center font-weight-bold ms-5">
                             Starts at
-                            <span class="text-muted">17-3-1997</span>
+                            <span class="text-muted">${todoData.start_date}</span>
                         </p>
                         <p class="d-flex flex-column text-center font-weight-bold me-5">
                             End at
-                            <span class="text-muted">17-31-5414</span>
+                            <span class="text-muted">${todoData.end_date}</span>
                         </p>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center mb-0">TODO</div>
-                </div>
-            </div>
-        </div>
-        `
+                    <div class="d-flex justify-content-center align-items-center mb-0">${todoData.status}</div>
+                </div >
+            </div >
+        </div >
+    `
     })
 }
