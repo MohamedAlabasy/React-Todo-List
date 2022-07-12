@@ -1,11 +1,16 @@
 
+import { Link, useNavigate } from 'react-router-dom'
 import { BiUser } from "react-icons/bi";
-import { Link } from 'react-router-dom'
 import Lottie from 'react-lottie-player'
 
 import todo from '../../assets/lottie/todo.json'
 
 export default function Login() {
+    const navigate = useNavigate()
+    const toHomePage = (e) => {
+        e.preventDefault()
+        navigate('/')
+    }
     return (
         <section className="vh-100" style={{ backgroundColor: "#eee" }}>
             <div className="container h-100 pt-5 pb-5">
@@ -18,7 +23,7 @@ export default function Login() {
 
                                         <p className="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login</p>
 
-                                        <form className="mx-1 mx-md-4">
+                                        <form className="mx-1 mx-md-4" onSubmit={(e) => { toHomePage(e) }}>
 
                                             <div className="d-flex flex-row align-items-center mb-4">
                                                 <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />

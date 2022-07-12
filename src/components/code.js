@@ -1,14 +1,26 @@
+import { Link, useNavigate } from 'react-router-dom'
 import { BiUser } from "react-icons/bi";
-import { Link } from 'react-router-dom'
 import Lottie from 'react-lottie-player'
 import resetPassword from '../assets/lottie/resetPassword.json'
 
 import { successAlert, failedAlert } from './alerts'
 
 export default function Code(pageName = 'Verification Email', isReset = true) {
+    const navigate = useNavigate()
+    const toNextPage = (e) => {
+        e.preventDefault()
+        if (isReset) {
+            successAlert()
+            navigate('/login')
+        } else {
+            failedAlert()
+            navigate('/')
+        }
+
+    }
     return (
         <>
-            <section className="vh-100" style={{ backgroundColor: "#eee" }}>
+            <section className="vh-80" style={{ backgroundColor: "#eee" }}>
                 <div className="container h-100 pt-5 pb-5">
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col-lg-11 col-xl-11">
@@ -26,7 +38,7 @@ export default function Code(pageName = 'Verification Email', isReset = true) {
                                                 <div className="alert alert-success bg-soft-primary border-2 text-center mb-5" role="alert">
                                                     The code has been sent to your email, please enter the code sent to the email to verify, and note that the code is valid for an hour from the time it was sent.                                                </div>
                                             }
-                                            <form className="mx-1 mx-md-4" onSubmit={() => { successAlert() }} >
+                                            <form className="mx-1 mx-md-4" onSubmit={(e) => { toNextPage(e) }} >
 
                                                 {isReset ?
                                                     <div className="d-flex flex-row align-items-center mb-4">
@@ -41,20 +53,24 @@ export default function Code(pageName = 'Verification Email', isReset = true) {
                                                     </div>
                                                 }
 
-                                                {isReset &&
-                                                    <div className="d-flex flex-row align-items-center mb-4">
-                                                        <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
-                                                        <div className="form-outline flex-fill mb-0">
-                                                            <input type='password' name='password' className="form-control" placeholder="password" />
-                                                        </div>
-                                                    </div>
+                                                {isReset
                                                     &&
-                                                    <div className="d-flex flex-row align-items-center mb-4">
-                                                        <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
-                                                        <div className="form-outline flex-fill mb-0">
-                                                            <input type='password' name='confirmPassword' className="form-control" placeholder="confirm password" />
+                                                    <>
+                                                        <div className="d-flex flex-row align-items-center mb-4">
+                                                            <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                            <div className="form-outline flex-fill mb-0">
+                                                                <input type='password' name='password' className="form-control" placeholder="password" />
+                                                            </div>
                                                         </div>
-                                                    </div>}
+
+                                                        <div className="d-flex flex-row align-items-center mb-4">
+                                                            <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                            <div className="form-outline flex-fill mb-0">
+                                                                <input type='password' name='confirmPassword' className="form-control" placeholder="confirm password" />
+                                                            </div>
+                                                        </div>
+                                                    </>
+                                                }
 
 
 

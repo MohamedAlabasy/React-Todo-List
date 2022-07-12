@@ -1,6 +1,5 @@
-import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { BiUser } from "react-icons/bi";
-import { Link } from 'react-router-dom'
 import Lottie from 'react-lottie-player'
 
 import register from '../../assets/lottie/register.json'
@@ -8,6 +7,11 @@ import register from '../../assets/lottie/register.json'
 
 
 export default function Register() {
+    const navigate = useNavigate()
+    const toVerificationEmail = (e) => {
+        e.preventDefault()
+        navigate('/verification')
+    }
     return (
         <section className="vh-80" style={{ backgroundColor: "#eee" }}>
             <div className="container h-100 pt-5 pb-5">
@@ -20,7 +24,7 @@ export default function Register() {
 
                                         <p className="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register</p>
 
-                                        <form className="mx-1 mx-md-4">
+                                        <form className="mx-1 mx-md-4" onSubmit={(e) => { toVerificationEmail(e) }}>
 
                                             <div className="d-flex flex-row align-items-center mb-4">
                                                 <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />

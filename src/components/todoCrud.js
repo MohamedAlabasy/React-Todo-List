@@ -1,11 +1,16 @@
+import { Link, useNavigate } from 'react-router-dom'
 import { BiUser } from "react-icons/bi";
-import { Link } from 'react-router-dom'
 import Lottie from 'react-lottie-player'
 
 import newTodo from '../assets/lottie/newTodo.json'
 
 
-export default function todoCrud(isAdd = true, title = '', description = '', status = '', priority = '', start_at = '', end_at = '') {
+export default function TodoCrud(isAdd = true, title = '', description = '', status = '', priority = '', start_at = '', end_at = '') {
+    const navigate = useNavigate()
+    const toHomePage = (e) => {
+        e.preventDefault()
+        navigate('/')
+    }
     return (
         <section className="vh-80" style={{ backgroundColor: "#eee" }}>
             <div className="container h-100 pt-5 pb-5">
@@ -18,7 +23,7 @@ export default function todoCrud(isAdd = true, title = '', description = '', sta
 
                                         <p className="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">{isAdd ? 'New ' : 'Edit '}TODO</p>
 
-                                        <form className="mx-1 mx-md-4">
+                                        <form className="mx-1 mx-md-4" onSubmit={(e) => { toHomePage(e) }}>
                                             {/* Title */}
                                             <div className="d-flex flex-row align-items-center mb-4">
                                                 <div class="input-group">

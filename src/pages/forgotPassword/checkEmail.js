@@ -1,5 +1,4 @@
-
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { BiUser } from "react-icons/bi";
 import { BsCaretLeftFill } from "react-icons/bs";
 import Lottie from 'react-lottie-player'
@@ -7,6 +6,11 @@ import Lottie from 'react-lottie-player'
 import email from '../../assets/lottie/email.json'
 
 export default function CheckEmail() {
+    const navigate = useNavigate()
+    const toCodePage = (e) => {
+        e.preventDefault()
+        navigate('/resetPassword')
+    }
     return (
         <>
             <section className="vh-100" style={{ backgroundColor: "#eee" }}>
@@ -24,7 +28,7 @@ export default function CheckEmail() {
                                             </div>
 
 
-                                            <form className="mx-1 mx-md-4"  >
+                                            <form className="mx-1 mx-md-4" onSubmit={(e) => { toCodePage(e) }} >
 
                                                 <div className="d-flex flex-row align-items-center mb-4">
                                                     <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
