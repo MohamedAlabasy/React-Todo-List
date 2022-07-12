@@ -1,7 +1,7 @@
 // import { useState } from 'react'
+import TodoTable from '../../components/todoTable'
 
 export default function InProgress() {
-    return (
-        <div>inProgress</div>
-    )
+    return TodoTable('In Progress')
+
 }

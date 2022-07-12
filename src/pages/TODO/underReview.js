@@ -1,7 +1,6 @@
 // import { useState } from 'react'
+import TodoTable from '../../components/todoTable'
 
 export default function UnderReview() {
-    return (
-        <div>underReview</div>
-    )
+    return TodoTable('Under Review')
 }
