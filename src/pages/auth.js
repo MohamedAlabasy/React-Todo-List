@@ -17,7 +17,6 @@ export default function Auth() {
 
                 <div class="login">
                     <form>
-                    
                         <label className='label' for="chk" aria-hidden="true">Login</label>
                         <input className='input' type="email" name="email" placeholder="Email" required="" />
                         <input className='input' type="password" name="pswd" placeholder="Password" required="" />
