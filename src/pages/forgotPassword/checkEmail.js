@@ -2,6 +2,10 @@
 import { Link } from 'react-router-dom'
 import { BiUser } from "react-icons/bi";
 import { BsCaretLeftFill } from "react-icons/bs";
+import Lottie from 'react-lottie-player'
+
+import email from '../../assets/lottie/email.json'
+
 export default function CheckEmail() {
     return (
         <>
@@ -39,9 +43,13 @@ export default function CheckEmail() {
                                             </form>
 
                                         </div>
-                                        <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                                className="img-fluid" alt="Sample image" />
+                                        <div className="col-md-10 col-lg-6 col-xl-6 d-flex align-items-center order-1 order-lg-2">
+                                            <Lottie
+                                                // loop
+                                                animationData={email}
+                                                play
+                                                style={{ width: '100%', height: '100%' }}
+                                            />
                                         </div>
                                     </div>
                                 </div>

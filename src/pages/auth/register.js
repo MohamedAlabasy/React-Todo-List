@@ -1,6 +1,10 @@
 import React from 'react'
 import { BiUser } from "react-icons/bi";
 import { Link } from 'react-router-dom'
+import Lottie from 'react-lottie-player'
+
+import register from '../../assets/lottie/register.json'
+
 
 
 export default function Register() {
@@ -60,9 +64,13 @@ export default function Register() {
                                         </form>
 
                                     </div>
-                                    <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                            className="img-fluid" alt="Sample image" />
+                                    <div className="col-md-10 col-lg-6 col-xl-6 d-flex align-items-center order-1 order-lg-2">
+                                        <Lottie
+                                            loop
+                                            animationData={register}
+                                            play
+                                            style={{ width: '100%', height: '100%' }}
+                                        />
                                     </div>
                                 </div>
                             </div>

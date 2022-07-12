@@ -1,6 +1,9 @@
-
 import { BiUser } from "react-icons/bi";
 import { Link } from 'react-router-dom'
+import Lottie from 'react-lottie-player'
+import resetPassword from '../assets/lottie/resetPassword.json'
+import email from '../assets/lottie/email.json'
+
 import { successAlert, failedAlert } from './alerts'
 
 export default function Code(pageName = 'Verification Email', isReset = true) {
@@ -16,34 +19,43 @@ export default function Code(pageName = 'Verification Email', isReset = true) {
                                         <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
                                             <p className="text-center h2 fw-bold mb-3 mx-1 mx-md-4 mt-4">{pageName}</p>
-                                            {!isReset && <div className="alert alert-success bg-soft-primary border-2 mb-5" role="alert">
-                                                Enter your email address and we'll send you an email with instructions to reset your password.
-                                            </div>}
-                                            {isReset && <div className="alert alert-success bg-soft-primary border-2 text-center mb-5" role="alert">
-                                                Enter the code that was sent to your verification email, then enter the new password
-                                            </div>}
+                                            {isReset ?
+                                                <div className="alert alert-success bg-soft-primary border-2 mb-5" role="alert">
+                                                    Enter your email address and we'll send you an email with instructions to reset your password.
+                                                </div>
+                                                :
+                                                <div className="alert alert-success bg-soft-primary border-2 text-center mb-5" role="alert">
+                                                    The code has been sent to your email, please enter the code sent to the email to verify, and note that the code is valid for an hour from the time it was sent.                                                </div>
+                                            }
                                             <form className="mx-1 mx-md-4" onSubmit={() => { successAlert() }} >
 
-                                                <div className="d-flex flex-row align-items-center mb-4">
-                                                    <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type='text' name='code' pattern="[0-9]{6}" maxLength={6} className="form-control" placeholder="code" />
+                                                {isReset ?
+                                                    <div className="d-flex flex-row align-items-center mb-4">
+                                                        <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                        <div className="form-outline flex-fill mb-0">
+                                                            <input type='text' name='code' pattern="[0-9]{6}" maxLength={6} className="form-control" placeholder="code" />
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                    :
+                                                    <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                                        <input type='text' name='code' pattern="[0-9]{6}" maxLength={6} className="form-control w-50 text-center" placeholder="code" />
+                                                    </div>
+                                                }
 
-                                                {isReset && <div className="d-flex flex-row align-items-center mb-4">
-                                                    <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type='password' name='password' className="form-control" placeholder="password" />
+                                                {isReset &&
+                                                    <div className="d-flex flex-row align-items-center mb-4">
+                                                        <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                        <div className="form-outline flex-fill mb-0">
+                                                            <input type='password' name='password' className="form-control" placeholder="password" />
+                                                        </div>
                                                     </div>
-                                                </div>}
-
-                                                {isReset && <div className="d-flex flex-row align-items-center mb-4">
-                                                    <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type='password' name='confirmPassword' className="form-control" placeholder="confirm password" />
-                                                    </div>
-                                                </div>}
+                                                    &&
+                                                    <div className="d-flex flex-row align-items-center mb-4">
+                                                        <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                        <div className="form-outline flex-fill mb-0">
+                                                            <input type='password' name='confirmPassword' className="form-control" placeholder="confirm password" />
+                                                        </div>
+                                                    </div>}
 
 
 
@@ -64,9 +76,15 @@ export default function Code(pageName = 'Verification Email', isReset = true) {
                                             </form>
 
                                         </div>
-                                        <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                                className="img-fluid" alt="Sample image" />
+                                        <div className="col-md-10 col-lg-6 col-xl-6 d-flex align-items-center order-1 order-lg-2">
+
+                                            <Lottie
+                                                // loop
+                                                animationData={resetPassword}
+                                                play
+                                                style={{ width: '100%', height: '100%' }}
+                                            />
+
                                         </div>
                                     </div>
                                 </div>
