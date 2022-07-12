@@ -1,7 +1,5 @@
-// import { useState } from 'react'
+import code from '../../components/code'
 
 export default function VerificationEmail() {
-    return (
-        <div>Verification</div>
-    )
+    return code('check Email', false)
 }

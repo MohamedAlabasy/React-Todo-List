@@ -14,7 +14,7 @@ export default function Register() {
                                 <div className="row justify-content-center">
                                     <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                                        <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register</p>
+                                        <p className="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register</p>
 
                                         <form className="mx-1 mx-md-4">
 

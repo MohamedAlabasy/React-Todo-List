@@ -1,13 +1,17 @@
 import Swal from 'sweetalert2'
 
-export const successAlert = () => {
-
+export const successAlert = (msg = 'Your data has been success') => {
+    Swal.fire(
+        'success!',
+        msg,
+        'success'
+    )
 }
-export const failedAlert = () => {
+export const failedAlert = (msg = 'Something went wrong!') => {
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Something went wrong!',
+        text: msg,
     })
 }
 
