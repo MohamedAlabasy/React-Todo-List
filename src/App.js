@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Auth from './pages/auth';
+import Login from './pages/login';
+import Register from './pages/register';
 import Home from './pages/home';
 import SingleTodo from './pages/singleTodo';
 import EditTodo from './pages/editTodo';
-// import Register from './pages/register';
 import InProgress from './pages/inProgress';
 import UnderReview from './pages/underReview';
 import Rework from './pages/rework';
@@ -18,8 +18,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/auth' exact element={<Auth />} />
-          {/* <Route path='/register' exact element={<Register />} /> */}
+          <Route path='/login' exact element={<Login />} />
+          <Route path='/register' exact element={<Register />} />
           <Route path='/home' exact element={<Home />} />
           <Route path='/show' exact element={<SingleTodo />} />
           <Route path='/edit' exact element={<EditTodo />} />
