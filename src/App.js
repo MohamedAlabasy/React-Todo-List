@@ -16,7 +16,7 @@ import EditTodo from './pages/todo/editTodo';
 import SingleTodo from './pages/todo/singleTodo';
 
 import NotVerified from './pages/notVerified';
-import NotFound from './pages/notFound';
+import EmptyStates from './pages/emptyStates';
 import './App.css';
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
           <Route path='/edit' exact element={<EditTodo />} />
 
           <Route path='/notVerified' exact element={<NotVerified />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path='*' element={<EmptyStates />} />
         </Routes>
       </BrowserRouter>
     </>
