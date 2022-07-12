@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { BiShowAlt, BiSearchAlt } from "react-icons/bi";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
-import { deleteAlert, searchAlert } from '../components/alerts'
+import { deleteAlert, searchAlert } from '../../components/alerts'
 
 export default function Home() {
 
