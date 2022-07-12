@@ -37,7 +37,7 @@ export default function CheckEmail() {
 
                                                 <div className="row justify-content-center mb-3 mb-lg-4">
                                                     <button type="submit" className="btn btn-primary w-100 mb-3">Send Code</button>
-                                                    <Link to={'/login'} className='text-center'><BsCaretLeftFill className="text-success" style={{ width: "20px", height: "20px" }} />Back to login</Link>
+                                                    <Link to={'/login'} className='btn btn-dark w-100 mb-3'><BsCaretLeftFill style={{ width: "20px", height: "20px", color: "#fff" }} />Back to login</Link>
                                                 </div>
 
                                             </form>
