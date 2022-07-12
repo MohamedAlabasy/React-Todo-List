@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
 import { BiShowAlt, BiSearchAlt } from "react-icons/bi";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
-import { deleteAlert, searchAlert } from './alerts'
+import { deleteAlert, searchAlert, showTODO } from './alerts'
 
 export default function TodoTable(status) {
     return (
         <section className="vh-100" style={{ backgroundColor: "#eee" }} >
             < div className="container py-5 h-100" >
                 <div className="row d-flex justify-content-center align-items-center h-100">
-                    <div className="col-md-12 col-xl-10">
+                    <div className="col-md-12 col-xl-12">
 
                         <div className="card">
                             <div className="card-header p-3">
@@ -49,7 +49,7 @@ export default function TodoTable(status) {
                                             </td>
 
                                             <td className="align-middle">
-                                                <Link to="/show" title="show"><BiShowAlt className="text-success me-3" style={{ width: "30px", height: "30px" }} /></Link>
+                                                <Link to="#" onClick={() => { showTODO() }} title="show"><BiShowAlt className="text-success me-3" style={{ width: "30px", height: "30px" }} /></Link>
                                                 <Link to="#" title="search" onClick={() => { searchAlert() }}><BiSearchAlt className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
                                                 <Link to="/edit" title="edit"><AiFillEdit className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
                                                 <Link to="#" onClick={() => { deleteAlert() }} title="delete"><AiFillDelete className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
