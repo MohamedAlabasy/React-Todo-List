@@ -1,7 +1,5 @@
-import React from 'react'
+import todoCrud from '../../components/todoCrud'
 
 export default function EditTodo() {
-    return (
-        <div>editTodo</div>
-    )
+    return todoCrud(false)
 }
