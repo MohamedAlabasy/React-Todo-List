@@ -30,11 +30,7 @@ export default function Login() {
                                             </div>
 
                                             <div className="form-check d-flex justify-content-center mb-5">
-                                                {/* <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                                                <label className="form-check-label" htmlFor="form2Example3">
-                                                    I agree all statements in <a href="#!">Terms of service</a>
-                                                </label> */}
-                                                <Link to={'forgotPassword'}>Forgotten password?</Link>
+                                                <Link to={'/checkEmail'}>Forgotten password?</Link>
                                             </div>
 
                                             <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
