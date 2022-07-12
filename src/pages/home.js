@@ -1,9 +1,12 @@
-// import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { BiShowAlt } from "react-icons/bi";
+import { BiShowAlt, BiSearchAlt } from "react-icons/bi";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
+import { deleteAlert, searchAlert } from '../components/alerts'
 
 export default function Home() {
+
+
+
     return (
         <section className="vh-100" style={{ backgroundColor: "#eee" }} >
             < div className="container py-5 h-100" >
@@ -50,8 +53,9 @@ export default function Home() {
 
                                             <td className="align-middle">
                                                 <Link to="/show" title="show"><BiShowAlt className="text-success me-3" style={{ width: "30px", height: "30px" }} /></Link>
+                                                <Link to="#" title="search" onClick={() => { searchAlert() }}><BiSearchAlt className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
                                                 <Link to="/edit" title="edit"><AiFillEdit className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
-                                                <Link to="#" title="delete"><AiFillDelete className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
+                                                <Link to="#" onClick={() => { deleteAlert() }} title="delete"><AiFillDelete className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
                                             </td>
                                         </tr>
                                     </tbody>
