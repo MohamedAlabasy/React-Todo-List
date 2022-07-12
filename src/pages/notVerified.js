@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-import { BiUser } from "react-icons/bi";
-import { BsCaretLeftFill } from "react-icons/bs";
 import Lottie from 'react-lottie-player'
 
 import notVerified from '../assets/lottie/notVerified.json'
@@ -12,7 +10,7 @@ export default function NotVerified() {
         <section className="vh-100" style={{ backgroundColor: "#eee" }}>
             <div className="container h-100 pt-5 pb-5">
                 <div className="row d-flex justify-content-center align-items-center h-100">
-                    <div className="col-lg-12 col-xl-11">
+                    <div className="col-lg-11 col-xl-11">
                         <div className="card text-black" style={{ borderRadius: "25px" }}>
                             <div className="card-body p-md-5">
                                 <div className="row justify-content-center">

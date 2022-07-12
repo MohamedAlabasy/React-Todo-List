@@ -7,6 +7,7 @@ import Register from './pages/auth/register';
 import VerificationEmail from './pages/auth/verificationEmail';
 
 import Home from './pages/todo/home';
+import NewTodo from './pages/todo/newTodo';
 import InProgress from './pages/todo/inProgress';
 import UnderReview from './pages/todo/underReview';
 import Rework from './pages/todo/rework';
@@ -31,6 +32,7 @@ function App() {
           <Route path='/verification' exact element={<VerificationEmail />} />
 
           <Route path='/' exact element={<Home />} />
+          <Route path='/add' exact element={<NewTodo />} />
           <Route path='/inProgress' exact element={<InProgress />} />
           <Route path='/underReview' exact element={<UnderReview />} />
           <Route path='/rework' exact element={<Rework />} />

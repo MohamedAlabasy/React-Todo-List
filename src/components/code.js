@@ -2,19 +2,18 @@ import { BiUser } from "react-icons/bi";
 import { Link } from 'react-router-dom'
 import Lottie from 'react-lottie-player'
 import resetPassword from '../assets/lottie/resetPassword.json'
-import email from '../assets/lottie/email.json'
 
 import { successAlert, failedAlert } from './alerts'
 
 export default function Code(pageName = 'Verification Email', isReset = true) {
     return (
         <>
-            <section className="vh-80" style={{ backgroundColor: "#eee" }}>
+            <section className="vh-100" style={{ backgroundColor: "#eee" }}>
                 <div className="container h-100 pt-5 pb-5">
                     <div className="row d-flex justify-content-center align-items-center h-100">
-                        <div className="col-lg-12 col-xl-11">
+                        <div className="col-lg-11 col-xl-11">
                             <div className="card text-black" style={{ borderRadius: "25px" }}>
-                                <div className="card-body p-md-5">
+                                <div className="card-body p-md-4">
                                     <div className="row justify-content-center">
                                         <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
