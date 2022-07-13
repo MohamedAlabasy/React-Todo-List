@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { BiUser } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
 import { BsCaretLeftFill } from "react-icons/bs";
 import Lottie from 'react-lottie-player'
 
@@ -31,7 +31,7 @@ export default function CheckEmail() {
                                             <form className="mx-1 mx-md-4" onSubmit={(e) => { toCodePage(e) }} >
 
                                                 <div className="d-flex flex-row align-items-center mb-4">
-                                                    <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                    <MdEmail className="text-dark fa-lg me-2" style={{ width: "35px", height: "35px" }} />
                                                     <div className="form-outline flex-fill mb-0">
                                                         <input type='email' name='email' className="form-control" placeholder="email" />
                                                     </div>

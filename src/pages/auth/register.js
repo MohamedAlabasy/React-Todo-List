@@ -1,10 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { BiUser } from "react-icons/bi";
-import { failedAlert, successAlert } from '../../components/alerts'
+import { MdEmail } from "react-icons/md";
+import { BsFillKeyFill } from "react-icons/bs";
+import { FaUserTie } from "react-icons/fa";
 import Lottie from 'react-lottie-player'
 import axios from 'axios'
 import { useState } from 'react'
 
+import { failedAlert, successAlert } from '../../components/alerts'
 import register from '../../assets/lottie/register.json'
 
 export default function Register() {
@@ -110,7 +112,7 @@ export default function Register() {
                                         <p className="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register</p>
                                         <form className="mx-1 mx-md-4" onSubmit={(e) => { toVerificationEmail(e) }}>
                                             <div className="d-flex flex-row align-items-center mb-3">
-                                                <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                <FaUserTie className="text-daek fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                 <div className="form-outline flex-fill mb-0">
                                                     <input type="text" placeholder="name" required className={`form-control ${registrationError.userNameError ? 'border border-danger' : ""}`} id="name" name='name' onChange={(e) => handelRegistrationForm(e)} />
                                                     {registrationError.userNameError && (<div className='form-text text-danger error'>
@@ -120,8 +122,9 @@ export default function Register() {
                                             </div>
 
 
+
                                             <div className="d-flex flex-row align-items-center mb-3">
-                                                <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                <MdEmail className="text-dark fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                 <div className="form-outline flex-fill mb-0">
                                                     <input type="email" placeholder="email address" required name='email' className={`form-control ${registrationError.emailError ? 'border border-danger' : ""}`} id="email" onChange={(e) => handelRegistrationForm(e)} />
                                                     {registrationError.emailError && (<div className='form-text text-danger error'>
@@ -130,7 +133,7 @@ export default function Register() {
                                                 </div>
                                             </div>
                                             <div className="d-flex flex-row align-items-center mb-4">
-                                                <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                <BsFillKeyFill className="text-dark fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                 <div className="form-outline flex-fill mb-0">
                                                     <input id='password' name='password' required className={`form-control ${registrationError.passwordError ? 'border border-danger' : ""}`} type="password" placeholder="password" onChange={(e) => handelRegistrationForm(e)} />
                                                     {registrationError.passwordError && (<div className='form-text text-danger error'>
@@ -144,7 +147,7 @@ export default function Register() {
 
 
                                             <div className="d-flex flex-row align-items-center mb-4">
-                                                <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                <BsFillKeyFill className="text-dark fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                 <div className="form-outline flex-fill mb-0">
                                                     <input id='confirmPassword' required className={`form-control ${registrationError.confirmPasswordError ? 'border border-danger' : ""}`} type="password" placeholder="confirm password" onChange={(e) => handelRegistrationForm(e)} />
                                                     {registrationError.confirmPasswordError && (<div className='form-text text-danger error'>

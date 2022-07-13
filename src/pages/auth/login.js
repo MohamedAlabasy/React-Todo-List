@@ -1,12 +1,13 @@
 
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { BiUser } from "react-icons/bi";
-import { failedAlert, successAlert } from '../../components/alerts'
+import { MdEmail } from "react-icons/md";
+import { BsFillKeyFill } from "react-icons/bs";
 import Lottie from 'react-lottie-player'
 import axios from 'axios'
 
 
+import { failedAlert, successAlert } from '../../components/alerts'
 import todo from '../../assets/lottie/todo.json'
 
 export default function Login() {
@@ -94,7 +95,7 @@ export default function Login() {
                                         <form className="mx-1 mx-md-4" onSubmit={(e) => { ToHomePage(e) }}>
 
                                             <div className="d-flex flex-row align-items-center mb-4">
-                                                <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                <MdEmail className="text-dark fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                 <div className="form-outline flex-fill mb-0">
                                                     <input type="email" required autoFocus id="email" className={`form-control ${loginError.emailError ? 'border border-danger' : ""}`} placeholder="email" onChange={(e) => handelLoginForm(e)} />
                                                     {loginError.emailError && (<div className='form-text text-danger error'>
@@ -104,7 +105,7 @@ export default function Login() {
                                             </div>
 
                                             <div className="d-flex flex-row align-items-center mb-4">
-                                                <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                <BsFillKeyFill className="text-dark fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                 <div className="form-outline flex-fill mb-0">
                                                     <input type="password" id="password"
                                                         className={`form-control ${loginError.passwordError ? 'border border-danger' : ""}`}

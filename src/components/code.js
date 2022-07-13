@@ -1,8 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { BiUser } from "react-icons/bi";
+import { BsFillKeyFill } from "react-icons/bs";
+import { GrValidate } from "react-icons/gr";
 import Lottie from 'react-lottie-player'
-import resetPassword from '../assets/lottie/resetPassword.json'
 
+import resetPassword from '../assets/lottie/resetPassword.json'
 import { successAlert, failedAlert } from './alerts'
 
 export default function Code(pageName = 'Verification Email', isReset = true) {
@@ -42,7 +43,7 @@ export default function Code(pageName = 'Verification Email', isReset = true) {
 
                                                 {isReset ?
                                                     <div className="d-flex flex-row align-items-center mb-4">
-                                                        <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                        <GrValidate className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                         <div className="form-outline flex-fill mb-0">
                                                             <input type='text' name='code' pattern="[0-9]{6}" maxLength={6} className="form-control" placeholder="code" />
                                                         </div>
@@ -57,14 +58,14 @@ export default function Code(pageName = 'Verification Email', isReset = true) {
                                                     &&
                                                     <>
                                                         <div className="d-flex flex-row align-items-center mb-4">
-                                                            <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                            <BsFillKeyFill className="text-dark fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                             <div className="form-outline flex-fill mb-0">
                                                                 <input type='password' name='password' className="form-control" placeholder="password" />
                                                             </div>
                                                         </div>
 
                                                         <div className="d-flex flex-row align-items-center mb-4">
-                                                            <BiUser className="text-success fa-lg me-3" style={{ width: "30px", height: "30px" }} />
+                                                            <BsFillKeyFill className="text-dark fa-lg me-3" style={{ width: "30px", height: "30px" }} />
                                                             <div className="form-outline flex-fill mb-0">
                                                                 <input type='password' name='confirmPassword' className="form-control" placeholder="confirm password" />
                                                             </div>
