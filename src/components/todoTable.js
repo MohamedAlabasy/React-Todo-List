@@ -8,22 +8,21 @@ import { deleteAlert, searchAlert, showTODO } from './alerts'
 export default function TodoTable(status, route) {
     const [todoList, setTodoList] = useState([]);
     const [count, setCount] = useState();
+
     useEffect(() => {
-        localStorage.setItem("id", '0');
         axios.get(`http://127.0.0.1:8080/todo/${route}/${localStorage.getItem('id')}`, {
         })
             .then((todoData) => {
                 setCount(todoData.data.count);
-                console.log(todoData.data.count);
                 setTodoList(todoData.data.data);
-                console.log(todoData.data.data);
+
             })
             .catch((error) => {
                 console.log(error);
             })
     }, [])
     return (
-        <section className={count < 10 ? "vh-100" : "vh-80"} style={{ backgroundColor: "#eee" }} >
+        <section className={(count < 10 || count === undefined) ? "vh-100" : "vh-80"} style={{ backgroundColor: "#eee" }} >
             < div className="container py-5 h-100 " >
                 <div className="row d-flex justify-content-center align-items-center h-100 ">
                     <div className="col-md-12 col-xl-12 ">
@@ -67,9 +66,9 @@ export default function TodoTable(status, route) {
 
                                                 <td className="align-middle">
                                                     <Link to="#" onClick={() => { showTODO(todo) }} title="show"><BiShowAlt className="text-success me-3" style={{ width: "30px", height: "30px" }} /></Link>
-                                                    <Link to="#" title="search" onClick={() => { searchAlert() }}><BiSearchAlt className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
-                                                    <Link to="/edit" title="edit"><AiFillEdit className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
-                                                    <Link to="#" onClick={() => { deleteAlert() }} title="delete"><AiFillDelete className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
+                                                    <Link to="#" title="search" onClick={() => { searchAlert() }}><BiSearchAlt className="text-dark me-3" style={{ width: "30px", height: "30px" }} /></Link>
+                                                    <Link to="/edit" title="edit"><AiFillEdit className="text-primary me-3" style={{ width: "30px", height: "30px" }} /></Link>
+                                                    <Link to="#" onClick={() => { deleteAlert() }} title="delete" ><AiFillDelete className="text-danger me-3" style={{ width: "30px", height: "30px" }} /></Link>
                                                 </td>
                                             </tr>
                                         })}
