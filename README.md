@@ -5,18 +5,16 @@
 Simple Task Management Tool has the following Lists ( TODO – IN progress – Under review – Rework - Completed )
 which can be Create Read Update Delete and move Task from List to another List.
 
-
 <p align="center">
    <img src="https://user-images.githubusercontent.com/93389016/178645259-9f42df1c-ad5c-4a3b-8d9a-bbde00b460d5.png" alt="Build Status">
 </p>
-
 
 ## To run this project
 
 `Step 1` : To use this project must install [Node.js](https://nodejs.org/en/) Then Download the source code
 
 ```
-git clone https://github.com/MohamedAlabasy/Node.JS-Todo-List.git
+git clone https://github.com/MohamedAlabasy/React-Todo-List.git
 ```
 
 `Step 2` : Enter the project file then install package
@@ -24,6 +22,7 @@ git clone https://github.com/MohamedAlabasy/Node.JS-Todo-List.git
 ```
 npm i
 ```
+
 `Step 3` : Download back-end Node.js source code :
 
 <h3 align="center">https://github.com/MohamedAlabasy/Node.JS-Todo-List</h3>
@@ -55,4 +54,3 @@ node run start
 <hr>
 
 Here are the [Command](https://github.com/MohamedAlabasy/React-Todo-List/blob/main/command.txt) that were used in the project, You will find it in the project file.
-
