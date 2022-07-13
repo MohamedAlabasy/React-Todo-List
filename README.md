@@ -18,3 +18,8 @@ git clone https://github.com/MohamedAlabasy/Node.JS-Todo-List.git
 ```
 npm i
 ```
+`Step 3` : To run project
+
+```
+node run start
+```
