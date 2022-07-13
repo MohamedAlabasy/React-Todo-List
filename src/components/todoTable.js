@@ -4,23 +4,37 @@ import { Link } from 'react-router-dom'
 import { BiShowAlt, BiSearchAlt } from "react-icons/bi";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { deleteAlert, searchAlert, showTODO } from './alerts'
+import { useNavigate } from 'react-router-dom'
 
 export default function TodoTable(status, route) {
+
+    const navigate = useNavigate()
     const [todoList, setTodoList] = useState([]);
     const [count, setCount] = useState();
-
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8080/todo/${route}/${localStorage.getItem('id')}`, {
-        })
-            .then((todoData) => {
-                setCount(todoData.data.count);
-                setTodoList(todoData.data.data);
+        if (
+            localStorage.getItem('id') === null ||
+            localStorage.getItem('token') === null ||
+            localStorage.getItem('is_verification') === null
+        ) {
+            navigate('/login')
+        } else {
 
+            if (localStorage.getItem('is_verification') === 'false') navigate('/notVerified')
+
+            axios.get(`http://127.0.0.1:8080/todo/${route}/${localStorage.getItem('id')}`, {
             })
-            .catch((error) => {
-                console.log(error);
-            })
-    }, [])
+                .then((todoData) => {
+                    setCount(todoData.data.count);
+                    setTodoList(todoData.data.data);
+
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+    }, [
+    ])
     return (
         <section className={(count < 10 || count === undefined) ? "vh-100" : "vh-80"} style={{ backgroundColor: "#eee" }} >
             < div className="container py-5 h-100 " >

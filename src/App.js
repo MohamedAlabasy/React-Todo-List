@@ -17,14 +17,15 @@ import SingleTodo from './pages/todo/singleTodo';
 
 import NotVerified from './pages/notVerified';
 import EmptyStates from './pages/emptyStates';
+
 import './App.css';
 // import 'dotenv/config'
 // import dotenv from 'dotenv'
 
 
 function App() {
-  console.log(process.env)
-  console.log(process.env.API_URL)
+  // console.log(process.env)
+  // console.log(process.env.API_URL)
   return (
     <>
       <BrowserRouter>
