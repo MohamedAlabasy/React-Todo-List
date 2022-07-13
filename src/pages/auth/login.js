@@ -58,8 +58,8 @@ export default function Login() {
             }
         )
             .then((userData) => {
-                console.log("aaaaaaaaaaaaaaaaaaaa", userData);
-                console.log(userData.response);
+                // console.log("aaaaaaaaaaaaaaaaaaaa", userData);
+                // console.log(userData.response);
                 if (userData && userData.data.status === 1) {
                     localStorage.setItem('id', userData.data.data.id)
                     localStorage.setItem('token', userData.data.token)
