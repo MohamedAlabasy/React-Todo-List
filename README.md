@@ -18,8 +18,21 @@ git clone https://github.com/MohamedAlabasy/Node.JS-Todo-List.git
 ```
 npm i
 ```
-`Step 3` : To run project
+`Step 3` : Download back-end Node.js source code :
+
+<h3 align="center">https://github.com/MohamedAlabasy/Node.JS-Todo-List</h3>
+
+`Step 4` : To run project
 
 ```
 node run start
 ```
+
+`Step 4` : Open the browser and click : [http://localhost:3000](http://localhost:3000/login)
+
+<hr>
+
+<hr>
+
+Here are the [Command](https://github.com/MohamedAlabasy/Node.JS-Todo-List/blob/main/command.txt) that were used in the project, You will find it in the project file.
+
