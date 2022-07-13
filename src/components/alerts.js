@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+import axios from 'axios'
 
 export const successAlert = (msg = 'Your data has been success') => {
     Swal.fire(
